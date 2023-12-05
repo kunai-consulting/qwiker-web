@@ -1,0 +1,66 @@
+.floating {
+    position: absolute;
+    z-index: 10;
+    box-sizing: border-box;
+    opacity: 0;
+    transition: opacity 0.5s, top 0.5s, right 0.5s;
+    pointer-events: none;
+    background-color: black;
+    color: white;
+    padding: 0.5rem;
+    width: 200px;
+    text-align: center;
+}
+
+.floating::after{
+    content: '';
+    position: absolute;
+    left: 45%;
+    width: 0;
+    height: 0;
+    clear: both;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+}
+
+.floating.top {
+    left: calc(50% - 100px);
+    bottom: calc(100% + 10px);
+}
+
+.floating.top::after {
+    top: 100%;
+    border-bottom: 10px solid transparent;
+    border-top: 10px solid black;
+}
+
+.floating.bottom {
+    left: calc(50% - 100px);
+    top: calc(100% + 10px);
+}
+
+.floating.bottom::after {
+    bottom: 100%;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid black;
+}
+
+.floating.left {
+    right: calc(100% + 5px);
+    bottom: 50%;
+}
+
+.floating.right {
+    left: calc(100% + 5px);
+    bottom: 50%;
+}
+
+.floating.open {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.floating.close {
+    opacity: 0;
+    pointer-events: none;
+}

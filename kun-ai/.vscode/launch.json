@@ -1,0 +1,41 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "qwik Chrome",
+      "type": "chrome",
+      "request": "launch",
+      "url": "http://localhost:5173",
+      "webRoot": "${workspaceFolder}",
+      "pathMapping": {
+        "/": "${webRoot}"
+      }
+    },
+    {
+      "name": "qwik SSR",
+      "type": "node",
+      "request": "launch",
+      "runtimeExecutable": "node",
+      "args": [
+        "--inspect",
+        "${workspaceFolder}/node_modules/.bin/vite", 
+        "--host",
+        "--mode",
+        "ssr",
+      ],
+      "skipFiles": [
+        "<node_internals>/**"
+      ],
+      "outFiles": [
+        "${workspaceFolder}/server/**/*.js"
+      ],
+      "console": "integratedTerminal"
+    }
+  ],
+  "compounds": [
+    {
+      "name": "Qwik Debug",
+      "configurations": ["qwik Chrome", "qwik SSR"]
+    }
+  ]
+}
