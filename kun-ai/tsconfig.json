@@ -27,7 +27,8 @@
     "tests",
     "./*.d.ts",
     "./*.config.ts",
-    "./adapters/**/*.config.ts"
+    "./adapters/**/*.config.ts",
+    "vite.config.mts"
   ],
   "exclude": ["node_modules", "tmp", "server", "dist"]
 }
