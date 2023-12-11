@@ -54,11 +54,11 @@ export default component$(() => {
             processes.
           </p>
         </div>
-        <div class={'flex w-full flex-row place-content-between pb-8'}>
+        <div class={'flex w-full flex-col lg:flex-row sm:flex-col place-content-between pb-0 sm:pb-0 lg:pb-8'}>
           <CardItem
             title={'Enhanced Workflow Management'}
             description={
-              'improve overall workflow efficiency with intelligent task reminders and streamlined communication, ensuring tasks are promptly addressed'
+              'Improve overall workflow efficiency with intelligent task reminders and streamlined communication, ensuring tasks are promptly addressed'
             }
             styles={[
               {
@@ -148,7 +148,7 @@ export default component$(() => {
           isShort={false}
           class={'pb-11 pt-24'}
         />
-        <div class={'flex w-full flex-row place-content-between pb-8'}>
+        <div class={'flex w-full flex-col sm:flex-col lg:flex-row place-content-between pb-0 xs:pb-0 lg:pb-8'}>
           <ReviewItem
             title={'Review 1'}
             short={'left'}
@@ -181,7 +181,7 @@ export default component$(() => {
             <ReviewFrame height={285} width={348} />
           </ReviewItem>
         </div>
-        <div class={'flex w-full flex-row place-content-between pb-8'}>
+        <div class={'flex w-full flex-col sm:flex-col lg:flex-row place-content-between pb-8'}>
           <ReviewItem
             title={'Review 3'}
             short={'left'}
