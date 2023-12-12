@@ -25,7 +25,7 @@ export default component$(() => {
     <div class={'w-full bg-[#0D0A0E]'}>
       <div
         class={
-          'bg-green relative mx-auto flex max-w-5xl flex-col px-[5.25rem] py-16'
+          'relative mx-auto flex max-w-5xl flex-col px-8 sm:px-[5.25rem] py-8 sm:py-16'
         }
       >
         <HeaderItem />
@@ -141,14 +141,14 @@ export default component$(() => {
             },
           ]}
         >
-          <div class={'h-52 w-80 bg-white'} />
+          <div class={'h-52 w-72 md:w-full lg:w-80 bg-white'} />
         </CardItem>
         <SubHeaderItem
           text={'Performance in perspective'}
           isShort={false}
-          class={'pb-11 pt-24'}
+          class={'pb-11 pt-10 lg:pt-24'}
         />
-        <div class={'flex w-full flex-col sm:flex-col lg:flex-row place-content-between pb-0 xs:pb-0 lg:pb-8'}>
+        <div class={'flex flex-col md:flex-col lg:flex-row place-content-between pb-0 xs:pb-0 lg:pb-8'}>
           <ReviewItem
             title={'Review 1'}
             short={'left'}
@@ -163,7 +163,7 @@ export default component$(() => {
               },
             ]}
           >
-            <ReviewFrame height={285} width={348} />
+            <ReviewFrame class={'h-[233px] w-[300px] md:h-[441px] md:w-[530px] lg:h-[285px] lg:w-[348px] self-center'} />
           </ReviewItem>
           <ReviewItem
             title={'Review 2'}
@@ -178,7 +178,7 @@ export default component$(() => {
               },
             ]}
           >
-            <ReviewFrame height={285} width={348} />
+            <ReviewFrame class={'h-[233px] w-[300px] md:h-[441px] md:w-[530px] lg:h-[285px] lg:w-[348px] self-center'} />
           </ReviewItem>
         </div>
         <div class={'flex w-full flex-col sm:flex-col lg:flex-row place-content-between pb-8'}>
@@ -196,7 +196,7 @@ export default component$(() => {
               },
             ]}
           >
-            <ReviewFrame height={285} width={348} />
+            <ReviewFrame class={'h-[233px] w-[300px] md:h-[441px] md:w-[530px] lg:h-[285px] lg:w-[348px] self-center'} />
           </ReviewItem>
           <ReviewItem
             title={'Review 4'}
@@ -211,7 +211,7 @@ export default component$(() => {
               },
             ]}
           >
-            <ReviewFrame height={285} width={348} />
+            <ReviewFrame class={'h-[233px] w-[300px] md:h-[441px] md:w-[530px] lg:h-[285px] lg:w-[348px] self-center'} />
           </ReviewItem>
         </div>
         <FooterItem />

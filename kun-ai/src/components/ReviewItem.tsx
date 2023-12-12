@@ -12,7 +12,7 @@ export default component$<ReviewProperties>((props) => {
   return (
     <div
       class={
-        'relative flex min-h-[36.75rem] w-fit min-w-[25rem] flex-col gap-8 overflow-hidden p-8 mb-8 xs:mb-8 lg:mb-0'
+        'relative flex min-h-[33rem] md:min-h-[36.75rem] flex-col gap-8 overflow-hidden p-3.5 md:p-8 mb-8 xs:mb-8 lg:mb-0'
       }
       style={{
         border: '1px solid #858891',
@@ -24,14 +24,14 @@ export default component$<ReviewProperties>((props) => {
       }}
     >
       <Slot />
-      <div class={'max-w-xs text-[#D5D5D5]'}>
+      <div class={'max-w-xs text-[#D5D5D5] px-4 md:px-0'}>
         <div class={'text-xl font-bold uppercase'}>{props.title}</div>
         <div class={'pt-3.5 text-base'}>{props.description}</div>
       </div>
       {props.styles &&
         props.styles.map((style, index) => (
           <div
-            class={'absolute h-64 min-w-[413px]'}
+            class={'absolute h-56 md:h-64 min-w-[413px] md:min-w-[600px] lg:min-w-[413px]'}
             key={`styles-${index}`}
             style={{
               zIndex: '-1',
@@ -44,7 +44,7 @@ export default component$<ReviewProperties>((props) => {
           />
         ))}
       <button
-        class="flex h-12 w-44 flex-row place-content-center items-center rounded border border-[#D5D5D5] font-semibold
+        class="flex h-12 w-44 mx-4 md:mx-0 flex-row place-content-center items-center rounded border border-[#D5D5D5] font-semibold
           uppercase text-[#D5D5D5] focus:ring-1 focus:ring-gray-400"
       >
         View More

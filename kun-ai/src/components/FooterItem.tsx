@@ -10,7 +10,7 @@ export default component$(() => {
         backgroundRepeat: 'no-repeat',
       }}
     >
-      <div class={'pb-14 text-[32px] font-bold text-[#D5D5D5]'}>
+      <div class={'pb-10 md:pb-14 text-2xl md:text-3xl md:leading-[50px] font-bold text-[#D5D5D5]'}>
         <h2>
           Step into the future with{' '}
           <span style={{ color: '#8F66FF' }}>Kun.AI</span>:

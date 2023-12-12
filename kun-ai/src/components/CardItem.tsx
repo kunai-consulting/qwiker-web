@@ -11,7 +11,7 @@ export default component$<CardProperties>((props) => {
   const additionalClass = props.orientation === "horizontal" ? 'flex-col sm:flex-col lg:flex-row' : 'flex-col';
   return (
     <div
-      class={`flex ${additionalClass} relative min-h-[14rem] min-w-[25rem] items-center justify-between gap-8 overflow-hidden p-8 mb-8 sm:mb-8 lg:mb-0`}
+      class={`flex ${additionalClass} relative min-h-[14rem] min-w-[20rem] sm:min-w-[25rem] items-center justify-between gap-8 overflow-hidden p-8 mb-8 sm:mb-8 lg:mb-0`}
       style={{
         border: `1px solid #858891`,
         borderRadius: `15px`,
