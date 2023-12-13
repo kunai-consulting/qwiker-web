@@ -27,15 +27,9 @@ export default component$<CardProperties>((props) => {
       {props.styles &&
         props.styles.map((style, index) => (
           <div
-            class={'absolute'}
+            class={'absolute -z-[1] opacity-75 blur-[45px] rotate-[79.85deg]'}
             key={`style-${index}`}
-            style={{
-              zIndex: '-1',
-              opacity: '0.76',
-              filter: 'blur(45px)',
-              transform: 'rotate(79.85deg)',
-              ...style,
-            }}
+            style={{...style}}
           />
         ))}
       <Slot />

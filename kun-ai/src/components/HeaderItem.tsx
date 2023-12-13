@@ -6,7 +6,7 @@ export default component$(() => {
       <h1>Elevate Your Work to</h1>
       <h1>Unprecedented Heights </h1>
       <h1>
-        with <span style={{ color: '#8F66FF' }}>Kun.AI</span>
+        with <span class='text-[#8F66FF]'>Kun.AI</span>
       </h1>
     </div>
   );
