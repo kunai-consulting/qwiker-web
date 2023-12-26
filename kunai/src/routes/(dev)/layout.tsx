@@ -1,5 +1,7 @@
 import { component$, Slot, useVisibleTask$, useSignal } from '@builder.io/qwik';
-import { type RequestHandler, useNavigate } from '@builder.io/qwik-city';
+import {type RequestHandler, routeLoader$, useNavigate} from '@builder.io/qwik-city';
+import {InitialValues} from "@modular-forms/qwik";
+import {email, Input, minLength, object, string} from "valibot";
 
 export const onGet: RequestHandler = async ({ cacheControl }) => {
   // Control caching for this request for best performance and to reduce hosting costs:
@@ -17,17 +19,44 @@ export const onGet: RequestHandler = async ({ cacheControl }) => {
   });
 };
 
+export const ContactUsSchema = object({
+  firstName: string([
+    minLength(1, 'First name required')
+  ]),
+  lastName: string([
+    minLength(1, 'Last name required')
+  ]),
+  email: string([
+    minLength(1, 'Email required.'),
+    email('Invalid email format.'),
+  ]),
+  company: string([
+    minLength(1, 'Company required')
+  ]),
+  description: string([
+    minLength(1, 'Description required'),
+  ]),
+});
+export type ContactUsForm = Input<typeof ContactUsSchema>;
+export const useFormLoader = routeLoader$<InitialValues<ContactUsForm>>(() => ({
+  firstName: '',
+  lastName: '',
+  email: '',
+  company: '',
+  description: ''
+}));
+
 export default component$(() => {
   const visible = useSignal(false);
   const nav = useNavigate();
   useVisibleTask$(
     () => {
-      const pass = prompt('Password?');
-      if (pass !== 'kunai-dev') {
-        nav('/');
-      } else {
+      // const pass = prompt('Password?');
+      // if (pass !== 'kunai-dev') {
+        // nav('/');
+      // } else {
         visible.value = true;
-      }
+      // }
     },
     {
       strategy: 'document-ready',
