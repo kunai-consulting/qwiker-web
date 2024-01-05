@@ -9,6 +9,7 @@ import {ContactUsForm, ContactUsSchema, useFormLoader} from "~/routes/(dev)/layo
 
 interface ContactUsProps {
   title?: string;
+  titleClass?: string;
 }
 
 export default component$<ContactUsProps>((props) => {
@@ -45,8 +46,8 @@ export default component$<ContactUsProps>((props) => {
   }
 
   return (
-    <div class='max-w-[800px] !p-12 ml-auto mr-auto w-full'>
-      <h2 class='pt-3 pb-4 mb-5 font-normal text-[32pt] leading-[64px] -tracking-[.5px]'>{props.title}</h2>
+    <div class='max-w-[800px] !p-10 ml-auto mr-auto w-full'>
+      <h2 class={props.titleClass}>{props.title}</h2>
       <Form onSubmit$={handleSubmit} class='flex flex-col gap-6 justify-center w-full'>
         <div class='flex gap-4 w-full'>
           <Field name="firstName">
