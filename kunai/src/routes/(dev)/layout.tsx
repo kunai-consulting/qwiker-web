@@ -51,12 +51,12 @@ export default component$(() => {
   const nav = useNavigate();
   useVisibleTask$(
     () => {
-      // const pass = prompt('Password?');
-      // if (pass !== 'kunai-dev') {
-        // nav('/');
-      // } else {
+      const pass = prompt('Password?');
+      if (pass !== 'kunai-dev') {
+        nav('/');
+      } else {
         visible.value = true;
-      // }
+      }
     },
     {
       strategy: 'document-ready',

@@ -115,7 +115,7 @@ export default component$(() => {
                     ${story.last ? 'h-[calc(100%+45px)] top-0 ' : ''}
                     border-l-[3px] border-white absolute right-1/2 translate-x-1/2`}/>
                   {story.last &&
-                    <div class='bottom-0 left-1/2 absolute -translate-x-2/4 translate-y-[50px]'>
+                    <div class='-bottom-[24px] left-1/2 absolute -translate-x-2/4 translate-y-[50px]'>
                       <DownArrow class='h-[17px] w-[27px] align-middle'/>
                     </div>
                   }
