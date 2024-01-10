@@ -1,6 +1,5 @@
 import type { QwikMouseEvent } from '@builder.io/qwik';
-import type { FocusTrap} from 'focus-trap';
-import { createFocusTrap } from 'focus-trap';
+import { createFocusTrap, type FocusTrap } from 'focus-trap';
 
 export type WidthState = {
   width: number | null;
