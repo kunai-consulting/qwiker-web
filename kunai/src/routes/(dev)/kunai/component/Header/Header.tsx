@@ -155,13 +155,16 @@ export default component$(() => {
     <>
       <header
         window:onScroll$={onScroll}
-        class="nav-section sticky top-0 z-50 flex h-[76px] w-full items-center justify-between bg-white py-2 max-md:max-w-full max-md:flex-wrap max-md:px-5"
+        class="sticky top-0 z-50 flex h-[76px] w-full items-center justify-between bg-white py-2 max-md:max-w-full max-md:flex-wrap max-md:px-5"
       >
         <a
-          class={`logo ${
-            !showIcon.value && 'logo-transition'
+          class={`absolute left-0 transition-all duration-1000 ${
+            !showIcon.value && 'left-1/2 -translate-x-1/2 transform'
           } flex cursor-pointer items-center gap-2`}
-          href="/kunai"
+          style={
+            showIcon.value ? '' : { willChange: 'transform', width: 'auto' }
+          }
+          href=""
           // onClick$={() => nav('/')}
         >
           <KunaiIcon dark={true} width={140} height={60} />
@@ -182,46 +185,46 @@ export default component$(() => {
             </div>
           )}
         </div>
-        <Modal
-          bind:show={showSig}
-          /* TODO: Need to figure how to add fade in animation */
-          // class={`${
-          //   showAnimation.value && 'fade-in-right'
-          // } left-auto m-0 h-full bg-white p-4 text-slate-950 backdrop:backdrop-brightness-50 dark:backdrop:backdrop-brightness-100`}
-          class={`left-auto m-0 h-full bg-white p-4 text-slate-950 backdrop:backdrop-brightness-50 dark:backdrop:backdrop-brightness-100`}
-        >
-          <ModalHeader>
-            <div class="flex w-full flex-1 items-center justify-between">
-              <KunaiIcon dark={true} width={140} height={60} />
-              <div class="flex items-stretch ">
-                <button
-                  onClick$={() => {
-                    showSig.value = false;
-                    //showAnimation.value = false;
-                  }}
-                >
-                  <CloseIcon />
-                </button>
-              </div>
-            </div>
-          </ModalHeader>
-          <ModalContent>
-            <div class="flex w-[400px] flex-grow overflow-y-auto p-4">
-              <div class="flex flex-grow flex-col justify-end">
-                {NAVIGATION_LINKS.map((value, index) => (
-                  <a
-                    key={index}
-                    href={'/kunai' + value.url}
-                    class="pb-4 text-black"
-                  >
-                    {value.title}
-                  </a>
-                ))}
-              </div>
-            </div>
-          </ModalContent>
-        </Modal>
       </header>
+      <Modal
+        bind:show={showSig}
+        /* TODO: Need to figure how to add fade in animation */
+        // class={`${
+        //   showAnimation.value && 'fade-in-right'
+        // } left-auto m-0 h-full bg-white p-4 text-slate-950 backdrop:backdrop-brightness-50 dark:backdrop:backdrop-brightness-100`}
+        class={`left-auto m-0 min-h-screen bg-white p-4 text-slate-950 backdrop:backdrop-brightness-50 dark:backdrop:backdrop-brightness-100`}
+      >
+        <ModalHeader>
+          <div class="flex w-full flex-1 items-center justify-between">
+            <KunaiIcon dark={true} width={140} height={60} />
+            <div class="flex items-stretch ">
+              <button
+                onClick$={() => {
+                  showSig.value = false;
+                  //showAnimation.value = false;
+                }}
+              >
+                <CloseIcon />
+              </button>
+            </div>
+          </div>
+        </ModalHeader>
+        <ModalContent>
+          <div class="flex w-[400px] flex-grow overflow-y-auto p-4">
+            <div class="flex flex-grow flex-col justify-end">
+              {NAVIGATION_LINKS.map((value, index) => (
+                <a
+                  key={index}
+                  href={'/kunai' + value.url}
+                  class="pb-4 text-black"
+                >
+                  {value.title}
+                </a>
+              ))}
+            </div>
+          </div>
+        </ModalContent>
+      </Modal>
     </>
   );
 });

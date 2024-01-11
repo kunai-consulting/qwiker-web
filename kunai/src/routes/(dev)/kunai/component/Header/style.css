@@ -1,20 +1,3 @@
-.nav-section {
-  height: 76px;
-
-  & .logo {
-    position: absolute;
-    left: 0;
-    transition: all 1s;
-  }
-
-  & .logo-transition {
-    will-change: transform;
-    left: 50%;
-    transform: translateX(-50%);
-    width: auto;
-  }
-}
-
 @keyframes fade-in-right {
   from {
     opacity: 0;
