@@ -12,11 +12,24 @@ import {useNavigate} from "@builder.io/qwik-city";
 
 export default component$(() => {
   const nav = useNavigate();
-  const onclick = $(() => {
-    console.log('clicked')
-  });
   const onclickAbout = $(() =>
     nav('/kunai/about')
+  );
+
+  const onclickCloud = $(() =>
+    nav('/kunai/case-study/cloud-migration')
+  );
+
+  const onclickDining = $(() =>
+    nav('/kunai/case-study/dining')
+  );
+
+  const onclickCoreBanking = $(() =>
+    nav('/kunai/case-study/core-banking-system')
+  );
+
+  const onclickNearshoring = $(() =>
+    nav('/kunai/case-study/nearshoring')
   );
 
   const Button = ({title = 'See the case study', isOutline = false, onClick}: {
@@ -93,7 +106,7 @@ export default component$(() => {
                     transformation by helping (unnamed bank) become an industry pioneer."
                   </div>
                 </div>
-                <Button onClick={onclick}/>
+                <Button onClick={onclickCloud}/>
               </div>
             </div>
           </div>
@@ -123,7 +136,7 @@ export default component$(() => {
                     “They designed, built, launched, and hosted an elite rewards platform in half the time we originally planned.”
                   </div>
                 </div>
-                <Button onClick={onclick} isOutline={true}/>
+                <Button onClick={onclickDining} isOutline={true}/>
               </div>
             </div>
           </div>
@@ -147,7 +160,7 @@ export default component$(() => {
                     "Kunai found us thirty niche developers in record time, making it possible for us to hit a critical milestone for our new core banking system."
                   </div>
                 </div>
-                <Button onClick={onclick} isOutline={true}/>
+                <Button onClick={onclickCoreBanking} isOutline={true}/>
               </div>
             </div>
           </div>
@@ -172,7 +185,7 @@ export default component$(() => {
                     “We don't need yet another offshore IT back office; the goal is to build teams of senior and mid-level engineers that we trust to execute at the same level as our US teams.”
                   </div>
                 </div>
-                <Button onClick={onclick} isOutline={true}/>
+                <Button onClick={onclickNearshoring} isOutline={true}/>
               </div>
             </div>
           </div>
