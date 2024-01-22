@@ -19,6 +19,7 @@ import Sravani from '../../kunai/images/careers/sravani.png';
 import Steve from '../../kunai/images/careers/steve.png';
 import Tarin from '../../kunai/images/careers/tarin.png';
 import Winnie from '../../kunai/images/careers/winnie.png';
+import { TestimonialCard } from '../../@shared/Card/TestimonialCard';
 
 export const Container = (props: { children: any; class: string }) => {
   return (
@@ -268,7 +269,15 @@ export default component$(() => {
             <div class="flex w-full justify-center gap-10 overflow-hidden">
               {shuffleArray(cardsToDisplay).map((cardIndex) => {
                 const card = testimonials[cardIndex];
-                return <></>;
+                return (
+                  <TestimonialCard
+                    key={card.name}
+                    name={card.name}
+                    testimonial={card.text}
+                    position={card.position}
+                    img={card.img}
+                  />
+                );
               })}
             </div>
 
