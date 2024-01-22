@@ -1,6 +1,6 @@
 import { component$, Slot } from "@builder.io/qwik";
 import { useLocation } from '@builder.io/qwik-city';
-import Header from "./Header";
+import Header from "./component/Header/Header";
 import Footer from "./Footer";
 import FooterNew from "~/routes/(dev)/kunai/FooterNew";
 
