@@ -313,6 +313,18 @@ export default component$(() => {
           </div>
         </Container>
       </section>
+
+      <section class="flex w-full flex-col justify-center self-center md:flex-row">
+        <div class="relative z-50 mx-auto flex w-full max-w-full flex-col items-center gap-5 bg-[#25282d] px-10 py-10 md:px-16 md:py-20">
+          <h2
+            class="pt-10 text-center text-3xl leading-normal text-white"
+            style="letter-spacing: -0.6px;"
+          >
+            Start your journey at Kunai
+          </h2>
+          <CTA text="Explore current openings" buttonColor="bg-red" />
+        </div>
+      </section>
     </>
   );
 });
