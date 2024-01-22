@@ -47,21 +47,21 @@ export const useFormLoader = routeLoader$<InitialValues<ContactUsForm>>(() => ({
 }));
 
 export default component$(() => {
-  const visible = useSignal(false);
+  const visible = useSignal(true);
   const nav = useNavigate();
-  useVisibleTask$(
-    () => {
-      const pass = prompt('Password?');
-      if (pass !== 'kunai-dev') {
-        nav('/');
-      } else {
-        visible.value = true;
-      }
-    },
-    {
-      strategy: 'document-ready',
-    },
-  );
+  // useVisibleTask$(
+  //   () => {
+  //     const pass = prompt('Password?');
+  //     if (pass !== 'kunai-dev') {
+  //       nav('/');
+  //     } else {
+  //       visible.value = true;
+  //     }
+  //   },
+  //   {
+  //     strategy: 'document-ready',
+  //   },
+  // );
   return visible.value ? (
     <>
       <main id="main-view">
