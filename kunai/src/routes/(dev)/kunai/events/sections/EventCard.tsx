@@ -2,7 +2,8 @@ import {$, component$, type QRL, Slot} from "@builder.io/qwik";
 import RedArrow from '~/routes/(public)/img/red_arrow.svg?jsx'
 
 interface EventCardProps {
-  cardProperties: { date: string, title: string, location: string, buttonTitle?: string }
+  cardProperties: { date: string, title: string, location: string, buttonTitle?: string },
+  onCardClick: QRL<() => void>
 }
 
 export default component$<EventCardProps>((props) => {
@@ -27,7 +28,9 @@ export default component$<EventCardProps>((props) => {
 
   return (
     <div
-      class='flex flex-col bg-white break-words border-none rounded-[20px] relative cursor-pointer w-full max-w-full'>
+      class='flex flex-col bg-white break-words border-none rounded-[20px] relative cursor-pointer w-full max-w-full'
+      onClick$={props.onCardClick}
+    >
       <div class='overflow-hidden rounded-t-[20px] rounded-b-none'>
         <div class='overflow-hidden relative w-full h-[11rem] md:h-[175px]'>
           <Slot/>
@@ -42,7 +45,7 @@ export default component$<EventCardProps>((props) => {
           <h6
             class='mt-0 mb-2 leading-[30px] -tracking-[.12px] font-normal text-xl text-[#25282d]'>{props.cardProperties.location}</h6>
         </div>
-        <Button onClick={onclick} title={props.cardProperties.buttonTitle}/>
+        <Button onClick={props.onCardClick} title={props.cardProperties.buttonTitle}/>
       </div>
     </div>
   )
