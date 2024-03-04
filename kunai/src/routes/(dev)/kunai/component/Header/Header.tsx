@@ -1,4 +1,4 @@
-import { component$, useSignal, $ } from '@builder.io/qwik';
+import { component$, useSignal, $, useVisibleTask$ } from '@builder.io/qwik';
 import KunaiIcon from '../../../@shared/Icon/kunai-icon';
 import { HamburgerButton } from '../../../@shared/Button/HamburgerButton';
 import { Modal, ModalContent, ModalHeader } from '../../../@shared/modal/modal';
@@ -42,121 +42,38 @@ export default component$(() => {
     { title: 'Contact', url: '/contact' },
   ];
 
-  const onScroll = $(() => {
+  useVisibleTask$(() => {
     if (isHomepage) {
-      if (typeof window !== 'undefined') {
-        window.scrollY > 1 ? (showIcon.value = true) : (showIcon.value = false);
-      } else {
-        showIcon.value = true;
-      }
+      let lastScrollY = window.scrollY;
+      let ticking = false;
+
+      const updateIconVisibility = () => {
+        showIcon.value = lastScrollY > 1;
+      };
+
+      const onScroll = () => {
+        lastScrollY = window.scrollY;
+        if (!ticking) {
+          window.requestAnimationFrame(() => {
+            updateIconVisibility();
+            ticking = false;
+          });
+          ticking = true;
+        }
+      };
+
+      window.addEventListener('scroll', onScroll);
+
+      // Cleanup
+      return () => window.removeEventListener('scroll', onScroll);
     } else {
       showIcon.value = true;
     }
   });
 
   return (
-    // <div class="container mx-auto max-w-7xl px-4">
-    //   <header class="flex flex-col py-4">
-    //     <nav class="hidden justify-end space-x-4 py-2 lg:flex">
-    //       <a href="#" class="text-red-500 hover:underline">
-    //         Careers
-    //       </a>
-    //       <a href="#" class="text-red-500 hover:underline">
-    //         About Us
-    //       </a>
-    //       <a href="#" class="text-red-500 hover:underline">
-    //         Contact
-    //       </a>
-    //     </nav>
-    //     <div class="flex items-center justify-between">
-    //       <a href={'kunai'}>
-    //         <KunaiIcon height={60} width={140} dark={true} />
-    //       </a>
-    //       <nav class="hidden space-x-4 lg:flex">
-    //         <Link
-    //           href={'/' + baseUrl + 'kunai/services'}
-    //           class="border-b-2 border-transparent hover:border-current hover:text-red-500"
-    //         >
-    //           Services
-    //         </Link>
-    //         <Link
-    //           href={'/' + baseUrl + 'kunai/industry-expertise'}
-    //           class="border-b-2 border-transparent hover:border-current hover:text-red-500"
-    //         >
-    //           Industry Expertise
-    //         </Link>
-    //         <Link
-    //           href={'/' + baseUrl + 'kunai/our-work'}
-    //           class="border-b-2 border-transparent hover:border-current hover:text-red-500"
-    //         >
-    //           Our Work
-    //         </Link>
-    //         <Link
-    //           href={'/' + baseUrl + 'kunai/talent-staffing'}
-    //           class="border-b-2 border-transparent hover:border-current hover:text-red-500"
-    //         >
-    //           Talent Staffing
-    //         </Link>
-    //         <Link
-    //           href={'/' + baseUrl + 'kunai/platforms'}
-    //           class="border-b-2 border-transparent hover:border-current hover:text-red-500"
-    //         >
-    //           Platforms
-    //         </Link>
-    //         <Link
-    //           href={'/' + baseUrl + 'kunai/news'}
-    //           class="border-b-2 border-transparent hover:border-current hover:text-red-500"
-    //         >
-    //           News
-    //         </Link>
-    //         <Link
-    //           href={'/' + baseUrl + 'kunai/insights'}
-    //           class="border-b-2 border-transparent hover:border-current hover:text-red-500"
-    //         >
-    //           Insights
-    //         </Link>
-    //       </nav>
-    //       <HamburgerButton toggleMenu={onClick} />
-
-    //       <Modal
-    //         bind:show={showSig}
-    //         class="mx- 0 mt-0 h-[1365px] w-full rounded-b-lg bg-white p-[20px] backdrop:backdrop-brightness-50 "
-    //       >
-    //         <ModalHeader>
-    //           <div class="flex items-center justify-between">
-    //             <KunaiIcon height={60} width={140} dark={true} />
-    //             <button
-    //               onClick$={() => (showSig.value = false)}
-    //               class="absolute right-6 top-[26px]"
-    //             >
-    //               <CloseIcon class="h-8 w-8" />
-    //             </button>
-    //           </div>
-    //         </ModalHeader>
-    //         <ModalContent class="flex flex-col space-y-4 overflow-y-auto pt-10">
-    //           <h2 class="text-xl font-bold text-black">Services</h2>
-    //           <h2 class="text-xl font-bold text-black">Industry Expertise</h2>
-    //           <h2 class="text-xl font-bold text-black">Our Work</h2>
-    //           <h2 class="text-xl font-bold text-black">Talent Staffing</h2>
-    //           <h2 class="text-xl font-bold text-black">Platforms</h2>
-    //           <h2 class="text-xl font-bold text-black">News</h2>
-    //           <h2 class="text-xl font-bold text-black">Insights</h2>
-    //           <div class="flex flex-col space-y-4 overflow-y-auto pt-10">
-    //             <h2 class="text-xl  text-black">Careers</h2>
-    //             <h2 class="text-xl  text-black">About Us</h2>
-    //             <h2 class="text-xl  text-black">Contact</h2>
-    //           </div>
-    //         </ModalContent>
-    //       </Modal>
-    //     </div>
-    //   </header>
-    // </div>
-
     <>
-      <header
-        window:onScroll$={onScroll}
-        class="sticky top-0 z-50 flex h-[76px] w-full items-center justify-between bg-white py-2 max-md:max-w-full max-md:flex-wrap max-md:px-5"
-      >
+      <header class="sticky top-0 z-50 flex h-[76px] w-full items-center justify-between bg-white py-2 max-md:max-w-full max-md:flex-wrap max-md:px-5">
         <a
           class={`absolute left-0 transition-all duration-1000 ${
             !showIcon.value && 'left-1/2 -translate-x-1/2 transform'
