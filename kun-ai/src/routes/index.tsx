@@ -39,17 +39,17 @@ export default component$(() => {
         </button>
         <SubHeaderItem text={'What is Kun.Ai?'} isShort={true} />
         <div class={'py-[45px] text-xl text-[#D5D5D5]'}>
-          <p>Our AI isn’t here to chat, it’s here to get work done.</p>
+          <p>Our AI isn’t here to chat — it’s here to get work done.</p>
           <br />
           <p>
             Kun.AI is a complete business process automation platform that’s
-            capable of interacting with the tools, spreadsheets and documents
+            capable of interacting with the tools, spreadsheets, and documents
             that your business runs on. We’re powered by the industry’s first
             Large Business Process Language Model (LBPLM).
           </p>
           <br />
           <p>
-            Kun.AI performs tasks autonomously, without being asked, cajoled or
+            Kun.AI performs tasks autonomously, without being asked, cajoled, or
             prompted. You define what needs to be done, and how it should be
             done, and it gets done. It isn’t an employee. It’s not a robot
             overlord. It’s intelligent automation done right.
@@ -63,7 +63,7 @@ export default component$(() => {
           <CardItem
             title={'natural language instruction'}
             description={
-              'In the Business Process Editor, write step by step instructions and guidelines as easily as you would write instructions for a new employee.'
+              'In the Business Process Editor, write step-by-step instructions and guidelines as easily as you would write instructions for a new employee.'
             }
             styles={[
               {
@@ -82,7 +82,7 @@ export default component$(() => {
             <CardItem
               title={'No code, no obstacles'}
               description={
-                'Enable the whole team to take control of  automations previously gatekept by software engineering teams and Zapier wizards. If there’s tasks that can be explained, the tasks can be automated.'
+                'Enable the whole team to take control of  automations previously gatekept by software engineering teams and Zapier wizards. If there are tasks that can be explained, the tasks can be automated.'
               }
               styles={[
                 {
@@ -162,7 +162,7 @@ export default component$(() => {
             title={'project management'}
             short={'left'}
             description={
-              'Kun.AI is keeping tickets up to date by automating many of the routine tasks surrounding stale tickets, and project updates.'
+              'Kun.AI is keeping tickets up-to-date by automating many of the routine tasks surrounding stale tickets and project updates.'
             }
             styles={[
               {
@@ -182,7 +182,7 @@ export default component$(() => {
             title={'document understanding'}
             short={'right'}
             description={
-              'Kun.AI is used to maintain multiple business critical spreadsheets, requiring reading of both PDFs and email items.'
+              'Kun.AI is used to maintain multiple business-critical spreadsheets, requiring reading of both PDFs and email items.'
             }
             styles={[
               {
@@ -207,7 +207,7 @@ export default component$(() => {
             title={'Research and reporting'}
             short={'left'}
             description={
-              'Kun.AI was used to cut down time to delivery for competitive analysis from one month to one day.'
+              'Kun.AI can cut down time to delivery for competitive analysis from one month to one day.'
             }
             styles={[
               {
@@ -227,7 +227,7 @@ export default component$(() => {
             title={'rule enforcement'}
             short={'right'}
             description={
-              'Kun.AI was used to enforce policy and practices by reviewing and flagging emails according to legal policy.'
+              'Kun.AI enforces policy and practices by reviewing and flagging emails according to legal policy.'
             }
             styles={[
               {
@@ -244,7 +244,7 @@ export default component$(() => {
           </ReviewItem>
         </div>
         <FooterItem />
-        <div class={'mt-9 text-xs text-[#D5D5D5]'}>Kuna.AI {year} ©</div>
+        <div class={'mt-9 text-xs text-[#D5D5D5]'}>© {year} Kun.AI</div>
       </div>
     </div>
   );
