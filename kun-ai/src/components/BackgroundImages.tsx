@@ -6,8 +6,8 @@ export default component$(() => {
   return (
     <>
       <Hor class={'absolute right-0 top-1.5'} />
-      <Vert class={'absolute right-0 md:left-0 top-[88rem]'} />
-      <Vert class={'absolute right-0 top-[113rem] rotate-180'} />
+      <Vert class={'absolute right-0 md:left-0 top-[62rem]'} />
+      <Vert class={'absolute right-0 top-[60rem] rotate-180'} />
     </>
   );
 });

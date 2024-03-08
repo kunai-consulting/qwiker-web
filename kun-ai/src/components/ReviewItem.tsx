@@ -1,5 +1,5 @@
 import { component$, CSSProperties, Slot } from '@builder.io/qwik';
-import Arrow from '/public/arrow-rotated.svg?jsx';
+// import Arrow from '/public/arrow-rotated.svg?jsx';
 
 interface ReviewProperties {
   title: string;
@@ -12,7 +12,7 @@ export default component$<ReviewProperties>((props) => {
   return (
     <div
       class={
-        'xs:mb-8 relative mb-8 flex min-h-[33rem] flex-col gap-8 overflow-hidden p-3.5 md:min-h-[36.75rem] md:p-8 lg:mb-0'
+        'xs:mb-8 relative mb-8 flex h-auto w-full flex-col gap-8 overflow-hidden p-3.5 md:p-8 lg:mb-0'
       }
       style={{
         border: '1px solid #858891',
@@ -20,7 +20,7 @@ export default component$<ReviewProperties>((props) => {
         background:
           'linear-gradient(180deg, rgba(255, 255, 255, 0.08) 36.92%, rgba(255, 255, 255, 0) 100%)',
         boxShadow: '0px 0px 43px -3px rgba(0, 0, 0, 0.14)',
-        backdropFilter: 'blur(22.5px)',
+        // backdropFilter: 'blur(22.5px)',
       }}
     >
       <Slot />
@@ -44,13 +44,13 @@ export default component$<ReviewProperties>((props) => {
             }}
           />
         ))}
-      <button
+      {/* <button
         class="mx-4 flex h-12 w-44 flex-row place-content-center items-center rounded border border-[#D5D5D5] font-semibold uppercase
           text-[#D5D5D5] focus:ring-1 focus:ring-gray-400 md:mx-0"
       >
         View More
         <Arrow height={12} width={12} class={'ml-3.5'} />
-      </button>
+      </button> */}
     </div>
   );
 });

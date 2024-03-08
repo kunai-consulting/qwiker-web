@@ -14,7 +14,7 @@ export default component$<CardProperties>((props) => {
       : 'flex-col';
   return (
     <div
-      class={`flex ${additionalClass} relative mb-8 min-h-[14rem] items-center justify-between gap-8 overflow-hidden rounded-[15px] border border-[#858891] bg-gradient-to-b from-[rgba(255,255,255,0.08)] to-[rgba(255,255,255,0)] p-8 shadow-[0_0_34px_-3px_rgba(0,0,0,0.1)] backdrop-blur-[22.5px] sm:mb-8 sm:min-w-[25rem] lg:mb-0`}
+      class={`flex ${additionalClass} relative mb-8 h-fit w-auto items-center justify-between gap-8 overflow-hidden rounded-[15px] border border-[#858891] bg-gradient-to-b from-[rgba(255,255,255,0.08)] to-[rgba(255,255,255,0)] p-8 shadow-[0_0_34px_-3px_rgba(0,0,0,0.1)] backdrop-blur-[22.5px] sm:mb-8 lg:mb-0`}
     >
       <div class={'max-w-none text-[#D5D5D5] sm:max-w-none lg:max-w-xs'}>
         <div class={'text-xl font-bold uppercase'}>{props.title}</div>
