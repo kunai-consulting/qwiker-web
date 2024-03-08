@@ -9,6 +9,9 @@ import BackgroundImages from '~/components/BackgroundImages';
 import ArrForward from '/public/arrow_forward.svg?jsx';
 //import ReviewFrame from '/public/review-frame.svg?jsx';
 
+import NaturalLanguageImg from '~/media/natural_language.png';
+import ContinuallyImg from '~/media/continually.png';
+
 export const head: DocumentHead = {
   title: 'Kun.AI',
   meta: [
@@ -84,7 +87,12 @@ export default component$(() => {
                 },
               ]}
             >
-              <div class={'h-56 w-full bg-white'} />
+              <img
+                src={NaturalLanguageImg}
+                width="80"
+                height="72"
+                class={'h-56 w-full bg-white'}
+              />
             </CardItem>
             <div class={'flex flex-col place-content-between'}>
               <CardItem
@@ -154,7 +162,12 @@ export default component$(() => {
               },
             ]}
           >
-            <div class={'h-52 w-72 bg-white md:w-full lg:w-80'} />
+            <img
+              src={ContinuallyImg}
+              width="80"
+              height="72"
+              class={'h-52 w-72 bg-white md:w-full lg:w-80'}
+            />
           </CardItem>
         </div>
 

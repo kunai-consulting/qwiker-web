@@ -25,12 +25,26 @@ export const RouterHead = component$(() => {
       <link rel="icon" type="image/png" sizes="32x32" href="favicon.svg" />
       <link rel="icon" type="image/png" sizes="16x16" href="favicon.svg" />
       {/* <link rel="manifest" href="site.webmanifest"> */}
-      <link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5" />
-      <meta name="apple-mobile-web-app-title" content="Kun.ai" />
-      <meta name="application-name" content="Kun.ai" />
+      <link rel="mask-icon" href="safari-pinned-tab.svg" />
+      <meta name="apple-mobile-web-app-title" content="Kun.Ai" />
+      <meta name="application-name" content="Kun.Ai" />
       <meta name="msapplication-TileColor" content="#ffffff" />
       <meta name="theme-color" content="#ffffff" />
       <base href={baseUrl || '/'} />
+
+      {/* Primary Meta Tags */}
+      <meta name="title" content="Kun.Ai" />
+      <meta
+        name="description"
+        content="AirKey technology turns any existing bank card into a state-of-the-art hardware authenticator."
+      />
+
+      {/* Open Graph Tags */}
+      <meta property="og:title" content="Kun.Ai" />
+      <meta
+        property="og:description"
+        content="Automate Real Work with Kun.AI"
+      />
 
       {head.meta.map((m) => (
         <meta key={m.key} {...m} content={m.content} />
