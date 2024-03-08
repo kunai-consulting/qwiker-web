@@ -7,7 +7,7 @@ import ReviewItem from '~/components/ReviewItem';
 import FooterItem from '~/components/FooterItem';
 import BackgroundImages from '~/components/BackgroundImages';
 import ArrForward from '/public/arrow_forward.svg?jsx';
-import ReviewFrame from '/public/review-frame.svg?jsx';
+//import ReviewFrame from '/public/review-frame.svg?jsx';
 
 export const head: DocumentHead = {
   title: 'Kun.AI',
@@ -30,13 +30,14 @@ export default component$(() => {
       >
         <HeaderItem />
         <BackgroundImages />
-        <button
+        <a
+          href="mailto:ss@kun.ai"
           class="mb-[4.5rem] mt-8 flex h-12 w-44 flex-row place-content-center items-center rounded border
           border-[#8F66FF] font-semibold uppercase text-[#D5D5D5] focus:ring-2 focus:ring-blue-800"
         >
           Let's try it
           <ArrForward class={'ml-3.5'} width={16} height={16} />
-        </button>
+        </a>
         <SubHeaderItem text={'What is Kun.Ai?'} isShort={true} />
         <div class={'py-[45px] text-xl text-[#D5D5D5]'}>
           <p>Our AI isn’t here to chat, it’s here to get work done.</p>
@@ -172,11 +173,11 @@ export default component$(() => {
               },
             ]}
           >
-            <ReviewFrame
+            {/* <ReviewFrame
               class={
                 'h-[235px] w-[258px] self-center md:h-[441px] md:w-[530px] lg:h-[285px] lg:w-[348px]'
               }
-            />
+            /> */}
           </ReviewItem>
           <ReviewItem
             title={'document understanding'}
@@ -191,11 +192,11 @@ export default component$(() => {
               },
             ]}
           >
-            <ReviewFrame
+            {/* <ReviewFrame
               class={
                 'h-[235px] w-[258px] self-center md:h-[441px] md:w-[530px] lg:h-[285px] lg:w-[348px]'
               }
-            />
+            /> */}
           </ReviewItem>
         </div>
         <div
@@ -217,11 +218,11 @@ export default component$(() => {
               },
             ]}
           >
-            <ReviewFrame
+            {/* <ReviewFrame
               class={
                 'h-[235px] w-[258px] self-center md:h-[441px] md:w-[530px] lg:h-[285px] lg:w-[348px]'
               }
-            />
+            /> */}
           </ReviewItem>
           <ReviewItem
             title={'rule enforcement'}
@@ -236,15 +237,15 @@ export default component$(() => {
               },
             ]}
           >
-            <ReviewFrame
+            {/* <ReviewFrame
               class={
                 'h-[235px] w-[258px] self-center md:h-[441px] md:w-[530px] lg:h-[285px] lg:w-[348px]'
               }
-            />
+            /> */}
           </ReviewItem>
         </div>
         <FooterItem />
-        <div class={'mt-9 text-xs text-[#D5D5D5]'}>Kuna.AI {year} ©</div>
+        <div class={'mt-9 text-xs text-[#D5D5D5]'}>Kun.AI {year} ©</div>
       </div>
     </div>
   );
