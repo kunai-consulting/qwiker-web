@@ -25,7 +25,7 @@ export default component$(() => {
     <div class={'w-full bg-[#0D0A0E]'}>
       <div
         class={
-          'relative mx-auto flex max-w-5xl flex-col px-8 sm:px-[5.25rem] py-8 sm:py-16'
+          'relative mx-auto flex max-w-5xl flex-col px-8 py-8 sm:px-[5.25rem] sm:py-16'
         }
       >
         <HeaderItem />
@@ -39,26 +39,31 @@ export default component$(() => {
         </button>
         <SubHeaderItem text={'What is Kun.Ai?'} isShort={true} />
         <div class={'py-[45px] text-xl text-[#D5D5D5]'}>
+          <p>Our AI isn’t here to chat, it’s here to get work done.</p>
+          <br />
           <p>
-            Reduce operational costs, optimize core processes, and stay ahead of
-            your
-            <br />
-            competitors.
+            Kun.AI is a complete business process automation platform that’s
+            capable of interacting with the tools, spreadsheets and documents
+            that your business runs on. We’re powered by the industry’s first
+            Large Business Process Language Model (LBPLM).
           </p>
           <br />
           <p>
-            Discover Kun.AI, our powerful platform combining localized
-            LLmproveMs with an adaptable
-            <br />
-            logic engine, ready to automate and innovate your business
-            processes.
+            Kun.AI performs tasks autonomously, without being asked, cajoled or
+            prompted. You define what needs to be done, and how it should be
+            done, and it gets done. It isn’t an employee. It’s not a robot
+            overlord. It’s intelligent automation done right.
           </p>
         </div>
-        <div class={'flex w-full flex-col lg:flex-row sm:flex-col place-content-between pb-0 sm:pb-0 lg:pb-8'}>
+        <div
+          class={
+            'flex w-full flex-col place-content-between pb-0 sm:flex-col sm:pb-0 lg:flex-row lg:pb-8'
+          }
+        >
           <CardItem
-            title={'Enhanced Workflow Management'}
+            title={'natural language instruction'}
             description={
-              'Improve overall workflow efficiency with intelligent task reminders and streamlined communication, ensuring tasks are promptly addressed'
+              'In the Business Process Editor, write step by step instructions and guidelines as easily as you would write instructions for a new employee.'
             }
             styles={[
               {
@@ -75,9 +80,9 @@ export default component$(() => {
           </CardItem>
           <div class={'flex flex-col place-content-between'}>
             <CardItem
-              title={'Optimized Human Resources'}
+              title={'No code, no obstacles'}
               description={
-                'Enhance HR efficiency by automatically identifying and reminding team members of pending tasks, ensuring streamlined processes'
+                'Enable the whole team to take control of  automations previously gatekept by software engineering teams and Zapier wizards. If there’s tasks that can be explained, the tasks can be automated.'
               }
               styles={[
                 {
@@ -99,9 +104,9 @@ export default component$(() => {
               ]}
             />
             <CardItem
-              title={'Advanced Profile Matching'}
+              title={'risk aware intelligence'}
               description={
-                'Automatically evaluate candidate profiles against job requirements, ensuring a seamless process for assessing compatibility'
+                'Our system proactively notifies operators of ambiguities, contradictions, and difficulties in business process instructions before automations operate on your business data.'
               }
               styles={[
                 {
@@ -117,9 +122,9 @@ export default component$(() => {
           </div>
         </div>
         <CardItem
-          title={'Efficient Automation'}
+          title={'continually improving'}
           description={
-            'Streamline team management by automatically reminding members of pending tasks, seamlessly integrated with Rippling'
+            'Kun.AI adapts to your business with our per-tenant continual learning engine. Provide supervision and instruction to the system just as you would a new hire, and it learns and improves.'
           }
           orientation={'horizontal'}
           styles={[
@@ -141,19 +146,23 @@ export default component$(() => {
             },
           ]}
         >
-          <div class={'h-52 w-72 md:w-full lg:w-80 bg-white'} />
+          <div class={'h-52 w-72 bg-white md:w-full lg:w-80'} />
         </CardItem>
         <SubHeaderItem
-          text={'Performance in perspective'}
+          text={'real world use cases'}
           isShort={false}
           class={'pb-11 pt-10 lg:pt-24'}
         />
-        <div class={'flex flex-col md:flex-col lg:flex-row place-content-between pb-0 xs:pb-0 lg:pb-8'}>
+        <div
+          class={
+            'xs:pb-0 flex flex-col place-content-between pb-0 md:flex-col lg:flex-row lg:pb-8'
+          }
+        >
           <ReviewItem
-            title={'Review 1'}
+            title={'project management'}
             short={'left'}
             description={
-              'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua'
+              'Kun.AI is keeping tickets up to date by automating many of the routine tasks surrounding stale tickets, and project updates.'
             }
             styles={[
               {
@@ -163,13 +172,17 @@ export default component$(() => {
               },
             ]}
           >
-            <ReviewFrame class={'h-[233px] w-[285px] md:h-[441px] md:w-[530px] lg:h-[285px] lg:w-[348px] self-center'} />
+            <ReviewFrame
+              class={
+                'h-[235px] w-[258px] self-center md:h-[441px] md:w-[530px] lg:h-[285px] lg:w-[348px]'
+              }
+            />
           </ReviewItem>
           <ReviewItem
-            title={'Review 2'}
+            title={'document understanding'}
             short={'right'}
             description={
-              'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua'
+              'Kun.AI is used to maintain multiple business critical spreadsheets, requiring reading of both PDFs and email items.'
             }
             styles={[
               {
@@ -178,15 +191,23 @@ export default component$(() => {
               },
             ]}
           >
-            <ReviewFrame class={'h-[233px] w-[285px] md:h-[441px] md:w-[530px] lg:h-[285px] lg:w-[348px] self-center'} />
+            <ReviewFrame
+              class={
+                'h-[235px] w-[258px] self-center md:h-[441px] md:w-[530px] lg:h-[285px] lg:w-[348px]'
+              }
+            />
           </ReviewItem>
         </div>
-        <div class={'flex w-full flex-col sm:flex-col lg:flex-row place-content-between pb-8'}>
+        <div
+          class={
+            'flex w-full flex-col place-content-between pb-8 sm:flex-col lg:flex-row'
+          }
+        >
           <ReviewItem
-            title={'Review 3'}
+            title={'Research and reporting'}
             short={'left'}
             description={
-              'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua'
+              'Kun.AI was used to cut down time to delivery for competitive analysis from one month to one day.'
             }
             styles={[
               {
@@ -196,13 +217,17 @@ export default component$(() => {
               },
             ]}
           >
-            <ReviewFrame class={'h-[233px] w-[285px] md:h-[441px] md:w-[530px] lg:h-[285px] lg:w-[348px] self-center'} />
+            <ReviewFrame
+              class={
+                'h-[235px] w-[258px] self-center md:h-[441px] md:w-[530px] lg:h-[285px] lg:w-[348px]'
+              }
+            />
           </ReviewItem>
           <ReviewItem
-            title={'Review 4'}
+            title={'rule enforcement'}
             short={'right'}
             description={
-              'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua'
+              'Kun.AI was used to enforce policy and practices by reviewing and flagging emails according to legal policy.'
             }
             styles={[
               {
@@ -211,7 +236,11 @@ export default component$(() => {
               },
             ]}
           >
-            <ReviewFrame class={'h-[233px] w-[285px] md:h-[441px] md:w-[530px] lg:h-[285px] lg:w-[348px] self-center'} />
+            <ReviewFrame
+              class={
+                'h-[235px] w-[258px] self-center md:h-[441px] md:w-[530px] lg:h-[285px] lg:w-[348px]'
+              }
+            />
           </ReviewItem>
         </div>
         <FooterItem />
