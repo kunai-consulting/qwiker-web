@@ -1,9 +1,9 @@
 {
   "$schema": "https://json.schemastore.org/web-manifest-combined.json",
-  "name": "Airkey",
-  "short_name": "Airkey",
+  "name": "kun.ai",
+  "short_name": "kun.ai",
   "start_url": ".",
   "display": "standalone",
   "background_color": "#fff",
-  "description": "Airkey"
+  "description": "kun.ai"
 }
