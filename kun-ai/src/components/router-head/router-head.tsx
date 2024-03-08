@@ -25,7 +25,7 @@ export const RouterHead = component$(() => {
       <link rel="icon" type="image/png" sizes="32x32" href="favicon.svg" />
       <link rel="icon" type="image/png" sizes="16x16" href="favicon.svg" />
       {/* <link rel="manifest" href="site.webmanifest"> */}
-      <link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5" />
+      <link rel="mask-icon" href="safari-pinned-tab.svg" />
       <meta name="apple-mobile-web-app-title" content="AirKey" />
       <meta name="application-name" content="AirKey" />
       <meta name="msapplication-TileColor" content="#ffffff" />
