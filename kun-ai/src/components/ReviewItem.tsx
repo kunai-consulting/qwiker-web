@@ -12,7 +12,7 @@ export default component$<ReviewProperties>((props) => {
   return (
     <div
       class={
-        'xs:mb-8 relative mb-8 flex h-auto flex-col gap-8 overflow-hidden p-3.5 md:p-8 lg:mb-0'
+        'xs:mb-8 relative mb-8 flex h-auto w-full flex-col gap-8 overflow-hidden p-3.5 md:p-8 lg:mb-0'
       }
       style={{
         border: '1px solid #858891',

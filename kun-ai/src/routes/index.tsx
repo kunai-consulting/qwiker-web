@@ -56,99 +56,102 @@ export default component$(() => {
             overlord. It’s intelligent automation done right.
           </p>
         </div>
-        <div
-          class={
-            'flex w-full flex-col place-content-between pb-0 sm:flex-col sm:pb-0 lg:flex-row lg:pb-8'
-          }
-        >
-          <CardItem
-            title={'natural language instruction'}
-            description={
-              'In the Business Process Editor, write step by step instructions and guidelines as easily as you would write instructions for a new employee.'
+        <div class="flex flex-col">
+          <div
+            class={
+              'grid w-full grid-cols-2 gap-8 pb-0 sm:flex-col sm:pb-0 lg:flex-row lg:pb-8'
             }
+          >
+            <CardItem
+              title={'natural language instruction'}
+              description={
+                'In the Business Process Editor, write step by step instructions and guidelines as easily as you would write instructions for a new employee.'
+              }
+              styles={[
+                {
+                  width: '294px',
+                  height: '294px',
+                  left: '120px',
+                  top: '240px',
+                  background:
+                    'linear-gradient(46.58deg, #FFAF66 14.53%, #FD1717 89.14%)',
+                },
+              ]}
+            >
+              <div class={'h-56 w-full bg-white'} />
+            </CardItem>
+            <div class={'flex flex-col place-content-between'}>
+              <CardItem
+                title={'No code, no obstacles'}
+                description={
+                  'Enable the whole team to take control of  automations previously gatekept by software engineering teams and Zapier wizards. If there’s tasks that can be explained, the tasks can be automated.'
+                }
+                styles={[
+                  {
+                    width: '245px',
+                    height: '245px',
+                    left: '195px',
+                    top: '36px',
+                    background:
+                      'linear-gradient(46.58deg, #8F66FF 14.53%, #FF40B3 89.14%)',
+                  },
+                  {
+                    width: '175px',
+                    height: '175px',
+                    left: '229px',
+                    top: '-73px',
+                    background:
+                      'linear-gradient(46.58deg, #5773FF 14.53%, #5CF1DF 89.14%)',
+                  },
+                ]}
+              />
+              <CardItem
+                title={'risk aware intelligence'}
+                description={
+                  'Our system proactively notifies operators of ambiguities, contradictions, and difficulties in business process instructions before automations operate on your business data.'
+                }
+                styles={[
+                  {
+                    width: '245px',
+                    height: '245px',
+                    left: '-82px',
+                    top: '40px',
+                    background:
+                      'linear-gradient(46.58deg, #FF66F9 14.53%, #FD1717 89.14%);',
+                  },
+                ]}
+              />
+            </div>
+          </div>
+          <CardItem
+            title={'continually improving'}
+            description={
+              'Kun.AI adapts to your business with our per-tenant continual learning engine. Provide supervision and instruction to the system just as you would a new hire, and it learns and improves.'
+            }
+            orientation={'horizontal'}
             styles={[
               {
-                width: '294px',
-                height: '294px',
-                left: '120px',
-                top: '240px',
+                width: '326px',
+                height: '326px',
+                left: '316px',
+                top: '70px',
                 background:
-                  'linear-gradient(46.58deg, #FFAF66 14.53%, #FD1717 89.14%)',
+                  'linear-gradient(46.58deg, #FF66F9 14.53%, #FD1717 89.14%)',
+              },
+              {
+                width: '332px',
+                height: '358px',
+                right: '-6px',
+                top: '-6px',
+                background:
+                  'linear-gradient(46.58deg, #FFF966 14.53%, #17FD2E 89.14%)',
               },
             ]}
           >
-            <div class={'h-56 w-full bg-white'} />
+            <div class={'h-52 w-72 bg-white md:w-full lg:w-80'} />
           </CardItem>
-          <div class={'flex flex-col place-content-between'}>
-            <CardItem
-              title={'No code, no obstacles'}
-              description={
-                'Enable the whole team to take control of  automations previously gatekept by software engineering teams and Zapier wizards. If there’s tasks that can be explained, the tasks can be automated.'
-              }
-              styles={[
-                {
-                  width: '245px',
-                  height: '245px',
-                  left: '195px',
-                  top: '36px',
-                  background:
-                    'linear-gradient(46.58deg, #8F66FF 14.53%, #FF40B3 89.14%)',
-                },
-                {
-                  width: '175px',
-                  height: '175px',
-                  left: '229px',
-                  top: '-73px',
-                  background:
-                    'linear-gradient(46.58deg, #5773FF 14.53%, #5CF1DF 89.14%)',
-                },
-              ]}
-            />
-            <CardItem
-              title={'risk aware intelligence'}
-              description={
-                'Our system proactively notifies operators of ambiguities, contradictions, and difficulties in business process instructions before automations operate on your business data.'
-              }
-              styles={[
-                {
-                  width: '245px',
-                  height: '245px',
-                  left: '-82px',
-                  top: '40px',
-                  background:
-                    'linear-gradient(46.58deg, #FF66F9 14.53%, #FD1717 89.14%);',
-                },
-              ]}
-            />
-          </div>
         </div>
-        <CardItem
-          title={'continually improving'}
-          description={
-            'Kun.AI adapts to your business with our per-tenant continual learning engine. Provide supervision and instruction to the system just as you would a new hire, and it learns and improves.'
-          }
-          orientation={'horizontal'}
-          styles={[
-            {
-              width: '326px',
-              height: '326px',
-              left: '316px',
-              top: '70px',
-              background:
-                'linear-gradient(46.58deg, #FF66F9 14.53%, #FD1717 89.14%)',
-            },
-            {
-              width: '332px',
-              height: '358px',
-              right: '-6px',
-              top: '-6px',
-              background:
-                'linear-gradient(46.58deg, #FFF966 14.53%, #17FD2E 89.14%)',
-            },
-          ]}
-        >
-          <div class={'h-52 w-72 bg-white md:w-full lg:w-80'} />
-        </CardItem>
+
         <SubHeaderItem
           text={'real world use cases'}
           isShort={false}
@@ -156,7 +159,7 @@ export default component$(() => {
         />
         <div
           class={
-            'xs:pb-0 flex flex-col place-content-between pb-0 md:flex-col lg:flex-row lg:pb-8'
+            'xs:pb-0 flex flex-col gap-8 pb-0 md:flex-col lg:flex-row lg:pb-8'
           }
         >
           <ReviewItem
@@ -199,11 +202,7 @@ export default component$(() => {
             /> */}
           </ReviewItem>
         </div>
-        <div
-          class={
-            'flex w-full flex-col place-content-between pb-8 sm:flex-col lg:flex-row'
-          }
-        >
+        <div class={'flex w-full flex-col gap-8 pb-8 sm:flex-col lg:flex-row'}>
           <ReviewItem
             title={'Research and reporting'}
             short={'left'}
