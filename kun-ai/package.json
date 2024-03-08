@@ -1,6 +1,6 @@
 {
-  "name": "c1-qwik-app",
-  "description": "Airkey",
+  "name": "qwiker-web",
+  "description": "qwiker-web",
   "engines": {
     "node": ">=20.6.0"
   },
