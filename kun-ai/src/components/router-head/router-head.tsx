@@ -34,10 +34,7 @@ export const RouterHead = component$(() => {
 
       {/* Primary Meta Tags */}
       <meta name="title" content="Kun.Ai" />
-      <meta
-        name="description"
-        content="AirKey technology turns any existing bank card into a state-of-the-art hardware authenticator."
-      />
+      <meta name="description" content="Automate Real Work with Kun.AI" />
 
       {/* Open Graph Tags */}
       <meta property="og:title" content="Kun.Ai" />
