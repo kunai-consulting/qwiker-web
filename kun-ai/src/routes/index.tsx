@@ -1,4 +1,4 @@
-import { component$ } from '@builder.io/qwik';
+import { component$, useOnDocument, useSignal, $ } from '@builder.io/qwik';
 import type { DocumentHead } from '@builder.io/qwik-city';
 import CardItem from '~/components/CardItem';
 import HeaderItem from '~/components/HeaderItem';
@@ -20,7 +20,13 @@ export const head: DocumentHead = {
 };
 
 export default component$(() => {
-  const year = new Date().getFullYear();
+  const year = useSignal(new Date().getFullYear());
+  useOnDocument(
+    'DOMContentLoaded',
+    $(() => {
+      year.value = new Date().getFullYear();
+    }),
+  );
   return (
     <div class={'w-full bg-[#0D0A0E]'}>
       <div
@@ -244,7 +250,7 @@ export default component$(() => {
           </ReviewItem>
         </div>
         <FooterItem />
-        <div class={'mt-9 text-xs text-[#D5D5D5]'}>Kuna.AI {year} ©</div>
+        <div class={'mt-9 text-xs text-[#D5D5D5]'}>Kuna.AI {year.value} ©</div>
       </div>
     </div>
   );
