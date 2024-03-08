@@ -1,5 +1,6 @@
-import { component$, CSSProperties, Slot } from '@builder.io/qwik';
-// import Arrow from '/public/arrow-rotated.svg?jsx';
+import type { CSSProperties } from '@builder.io/qwik';
+import { component$, Slot } from '@builder.io/qwik';
+// import Arrow from '~/media/arrow-rotated.svg?jsx';
 
 interface ReviewProperties {
   title: string;

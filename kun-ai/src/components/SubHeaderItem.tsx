@@ -1,6 +1,6 @@
 import { component$ } from '@builder.io/qwik';
-import Short from '/short-subtract.svg';
-import Long from '/long-subtract.svg';
+import Short from '~/media/short-subtract.svg';
+import Long from '~/media/long-subtract.svg';
 
 interface SubheaderPropertied {
   text: string;

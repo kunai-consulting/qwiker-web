@@ -6,8 +6,8 @@ import SubHeaderItem from '~/components/SubHeaderItem';
 import ReviewItem from '~/components/ReviewItem';
 import FooterItem from '~/components/FooterItem';
 import BackgroundImages from '~/components/BackgroundImages';
-import ArrForward from '/public/arrow_forward.svg?jsx';
-//import ReviewFrame from '/public/review-frame.svg?jsx';
+import ArrForward from '~/media/arrow_forward.svg?jsx';
+//import ReviewFrame from '~/media/review-frame.svg?jsx';
 
 import NaturalLanguageImg from '~/media/natural_language.png';
 import ContinuallyImg from '~/media/continually.png';

@@ -1,5 +1,5 @@
 import { component$ } from '@builder.io/qwik';
-import ArrForward from '/public/arrow_forward.svg?jsx';
+import ArrForward from '~/media/arrow_forward.svg?jsx';
 
 export default component$(() => {
   return (
