@@ -1,12 +1,14 @@
 import { component$ } from '@builder.io/qwik';
 import ArrForward from '~/media/arrow_forward.svg?jsx';
+import Footer from '~/media/footer.svg';
 
 export default component$(() => {
   return (
     <div
-      class='-ml-1 mt-0 flex flex-col place-content-between gap-8 rounded-2xl border
-              border-[#858891] bg-[url("/footer.svg")] bg-no-repeat p-8
-              max-lg:bg-[70%_80%] lg:mt-8'
+      class={`-ml-1 mt-0 flex flex-col place-content-between gap-8 rounded-2xl border
+              border-[#858891] bg-no-repeat p-8
+              max-lg:bg-[70%_80%] lg:mt-8`}
+      style={{ background: `url("${Footer}")` }}
     >
       <div
         class={
