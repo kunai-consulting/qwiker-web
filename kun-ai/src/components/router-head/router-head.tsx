@@ -2,6 +2,8 @@ import { useDocumentHead, useLocation } from '@builder.io/qwik-city';
 
 import { component$ } from '@builder.io/qwik';
 
+import OgImage from "~/media/og_image.png"
+
 /**
  * The RouterHead component is placed inside of the document `<head>` element.
  */
@@ -42,6 +44,10 @@ export const RouterHead = component$(() => {
         property="og:description"
         content="Automate Real Work with Kun.AI"
       />
+      <meta property="og:image" content={OgImage} />
+      <meta property="og:image:width" content="1200" />
+      <meta property="og:image:height" content="630" />
+      <meta property="og:type" content="website" />
 
       {head.meta.map((m) => (
         <meta key={m.key} {...m} content={m.content} />
