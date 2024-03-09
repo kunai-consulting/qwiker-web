@@ -4,6 +4,7 @@ on:
   push:
     paths:
       - 'kun-ai/**'
+      - '.github/workflows/deploy-kun-ai.yml'
     branches:
       - main
 
@@ -34,6 +35,9 @@ jobs:
 
       - name: Install Dependencies
         run: npm ci
+
+      - name: Create .env file
+        run: touch .env
 
       - name: Build
         run: npm run build.all
