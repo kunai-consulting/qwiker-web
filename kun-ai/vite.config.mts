@@ -10,8 +10,21 @@ const baseUrl =
 
 export default defineConfig(() => {
   return {
+    clearScreen: false,
+    ssr: {
+      external: ['node:async_hooks'],
+    },
+
     // basePathname: base ? baseUrl : "/",
     // base: base ? baseUrl : "/",
+    build: {
+      // assetsDir: './@assets',
+      rollupOptions: {
+        output: {
+          assetFileNames: 'assets/[hash]/[name][extname]',
+        },
+      },
+    },
     plugins: [
       qwikCity({
         // @ts-ignore
@@ -22,7 +35,8 @@ export default defineConfig(() => {
     ],
     preview: {
       headers: {
-        'Cache-Control': 'public, max-age=600',
+        //     anyone can cache | browser 1 day |    cdn 1 week |
+        'Cache-Control': 'public, max-age=86400, s-maxage=604800',
       },
     },
     server: {
