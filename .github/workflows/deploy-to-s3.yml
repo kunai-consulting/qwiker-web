@@ -21,7 +21,6 @@ jobs:
       run:
         working-directory: kun-ai
 
-
     steps:
       - name: Checkout PR Branch
         uses: actions/checkout@v2
@@ -37,7 +36,7 @@ jobs:
         run: npm ci
 
       - name: Build
-         run: npm run build.all
+        run: npm run build.all
 
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v1
@@ -96,7 +95,7 @@ jobs:
       #   with:
       #     issue-number: ${{ github.event.pull_request.number }}
       #     body: |
-      #       Preview URL: 
+      #       Preview URL:
       #       [${{ secrets.VITE_ORIGIN_URL }}/${{ github.event.pull_request.head.ref }}](https://${{ secrets.VITE_ORIGIN_URL }}/${{ github.event.pull_request.head.ref }})
 
       #       [${{ secrets.VITE_AWS_ORIGIN_URL }}/${{ github.event.pull_request.head.ref }}](https://${{ secrets.VITE_AWS_ORIGIN_URL }}/${{ github.event.pull_request.head.ref }})
