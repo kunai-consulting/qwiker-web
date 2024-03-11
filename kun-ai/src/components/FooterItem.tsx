@@ -6,8 +6,8 @@ export default component$(() => {
   return (
     <div
       class={`-ml-1 mt-0 flex flex-col place-content-between gap-8 rounded-2xl border
-              border-[#858891] bg-no-repeat p-8
-              max-lg:bg-[70%_80%] lg:mt-8`}
+              border-[#858891] p-8
+              max-lg:!bg-[70%_80%] lg:mt-8`}
       style={{ background: `url("${Footer}")` }}
     >
       <div

@@ -68,7 +68,7 @@ export default component$(() => {
         <div class="flex flex-col">
           <div
             class={
-              'grid w-full grid-cols-2 gap-8 pb-0 sm:flex-col sm:pb-0 lg:flex-row lg:pb-8'
+              'flex w-full flex-col gap-8 pb-0 md:grid md:grid-cols-2 lg:flex-row lg:pb-8'
             }
           >
             <CardItem
