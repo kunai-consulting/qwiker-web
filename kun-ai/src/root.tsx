@@ -25,6 +25,7 @@ export default component$(() => {
         <link href="https://fonts.cdnfonts.com/css/work-sans" rel="stylesheet" />
         <RouterHead />
         <ServiceWorkerRegister />
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-MV7NBLG15Y"></script>
         <script
           dangerouslySetInnerHTML={
             activeTheme.toString() + `\n${activeTheme.name}('light');`
@@ -33,6 +34,18 @@ export default component$(() => {
         <script
           dangerouslySetInnerHTML={
             /*javascript*/ `
+            // remove index.html
+            if (window.location.pathname.endsWith('/index.html')) {
+                history.replaceState({}, document.title, window.location.pathname.slice(0,-10));
+            }
+            // googletagmanager
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+          
+            gtag('config', 'G-MV7NBLG15Y');
+            // end googletagmanager
+
             // scroll restoration
             document.addEventListener("DOMContentLoaded", function (event) {
               var scrollpos = sessionStorage.getItem('scrollpos');
