@@ -49,8 +49,12 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: ${{ secrets.AWS_REGION }}
 
-      - name: Deploy to S3
-        run: aws s3 sync ./dist s3://${{ secrets.KUN_AI_BUCKET }}
+      - name: Deploy Assets to S3
+        run: aws s3 sync ./dist s3://${{ secrets.KUN_AI_BUCKET }} --exclude "index.html"
+      - name: Deploy index.html with headers to S3
+        run: aws s3 cp ./dist/index.html s3://${{ secrets.KUN_AI_BUCKET }}/index.html --cache-control "max-age=86400" --content-type "text/html"
+
+
 
       - name: Invalidate Entire CloudFront Cache for Main
         if: github.ref == 'refs/heads/main'
