@@ -3,7 +3,7 @@ import { useDocumentHead, useLocation } from '@builder.io/qwik-city';
 import { component$ } from '@builder.io/qwik';
 
 import OgImage from "~/media/og_image.png"
-import Favicon from '~/media/favicon-32x32.png';
+import Favicon from '~/media/green-favicon-32x32.png';
 
 /**
  * The RouterHead component is placed inside of the document `<head>` element.
