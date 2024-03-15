@@ -38,9 +38,10 @@ export default component$(() => {
     }),
   );
   const emailLoading$ = sync$((event: Event, target: HTMLAnchorElement) => {
+    const prev = target.innerHTML;
     target.textContent = 'emailing...';
     setTimeout(() => {
-      target.textContent = "Let's try it";
+      target.innerHTML = prev;
     }, 2000);
   });
   return (
@@ -66,7 +67,13 @@ export default component$(() => {
           border-[#8F66FF] font-semibold uppercase text-[#D5D5D5] transition-colors duration-200 hover:bg-[#8F66FF] focus:ring-2 focus:ring-blue-800"
         >
           Let's try it
-          <ArrForward class={'ml-3.5'} width={16} height={16} />
+          <ArrForward
+            class={
+              'ml-3.5 transition-transform duration-200 hover:translate-x-2'
+            }
+            width={16}
+            height={16}
+          />
         </a>
         <SubHeaderItem text={'What is Kun.Ai?'} isShort={true} />
         <div class={'py-[45px] text-xl text-[#D5D5D5]'}>
@@ -292,7 +299,13 @@ export default component$(() => {
             class="hover:text-shadow-md mb-2 flex h-12 w-44 flex-row place-content-center items-center rounded border border-[#8F66FF] font-semibold uppercase text-[#D5D5D5] transition-colors duration-200 hover:bg-[#8F66FF] focus:ring-2 focus:ring-blue-800 lg:mb-12"
           >
             Let's try it
-            <ArrForward class={'ml-3.5'} width={16} height={16} />
+            <ArrForward
+              class={
+                'ml-3.5 transition-transform duration-200 hover:translate-x-2'
+              }
+              width={16}
+              height={16}
+            />
           </a>
         </FooterItem>
         <div class={'mt-9 text-xs text-[#D5D5D5]'}>© {year.value} Kun.AI</div>
