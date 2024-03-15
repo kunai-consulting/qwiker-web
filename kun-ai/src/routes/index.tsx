@@ -11,6 +11,7 @@ import ArrForward from '~/media/arrow_forward.svg?jsx';
 
 import NaturalLanguageImg from '~/media/natural_language.png';
 import ContinuallyImg from '~/media/continually.png';
+import KunaiLogo from '~/media/green-favicon-32x32.png';
 
 export const head: DocumentHead = {
   title: 'Kun.AI',
@@ -31,7 +32,14 @@ export default component$(() => {
     }),
   );
   return (
-    <div class={'w-full bg-[#0D0A0E]'}>
+    <div class={'w-full bg-[#0D0A0E] pt-6'}>
+      <a href="https://kunaico.com/">
+        <div class="fixed left-0 top-0 z-50 flex items-center rounded-br-xl bg-[#171919] p-2 text-white">
+          <img src={KunaiLogo} width="32" height="32" class="mr-2 h-8 w-8" />
+          <span class="pr-2">Kunai</span>
+        </div>
+      </a>
+
       <div
         class={
           'relative mx-auto flex max-w-5xl flex-col px-8 py-8 sm:px-[5.25rem] sm:py-16'

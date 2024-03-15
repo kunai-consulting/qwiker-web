@@ -22,10 +22,16 @@ export default component$(() => {
       <head>
         <meta charSet="utf-8" />
         <link rel="manifest" href="manifest.json" />
-        <link href="https://fonts.cdnfonts.com/css/work-sans" rel="stylesheet" />
+        <link
+          href="https://fonts.cdnfonts.com/css/work-sans"
+          rel="stylesheet"
+        />
         <RouterHead />
         <ServiceWorkerRegister />
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-MV7NBLG15Y"></script>
+        <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-MV7NBLG15Y"
+        ></script>
         <script
           dangerouslySetInnerHTML={
             activeTheme.toString() + `\n${activeTheme.name}('light');`
@@ -62,7 +68,7 @@ export default component$(() => {
           }
         ></script>
       </head>
-      <body lang="en">
+      <body lang="en" class="bg-[#0D0A0E]">
         <RouterOutlet />
       </body>
     </QwikCityProvider>
