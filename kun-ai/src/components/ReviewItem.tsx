@@ -27,7 +27,7 @@ export default component$<ReviewProperties>((props) => {
       <Slot />
       <div class={'max-w-xs px-4 text-[#D5D5D5] md:px-0'}>
         <div class={'text-xl font-bold uppercase'}>{props.title}</div>
-        <div class={'pt-3.5 text-base'}>{props.description}</div>
+        <div class={'text-pretty pt-3.5'}>{props.description}</div>
       </div>
       {props.styles &&
         props.styles.map((style, index) => (

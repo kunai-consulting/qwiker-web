@@ -48,7 +48,7 @@ export default component$(() => {
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-          
+            // cSpell:ignore NBLG
             gtag('config', 'G-MV7NBLG15Y');
             // end googletagmanager
 
@@ -60,7 +60,7 @@ export default component$(() => {
                 sessionStorage.removeItem('scrollpos');
               }
             });
-      
+
             window.addEventListener("beforeunload", function (e) {
               sessionStorage.setItem('scrollpos', window.scrollY);
             });

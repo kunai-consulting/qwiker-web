@@ -9,6 +9,11 @@
 body {
   font-family: 'Work Sans', sans-serif;
 }
+@layer components {
+  .text-pretty {
+    text-wrap: pretty;
+  }
+}
 .prefers-contrast {
   display: block;
 }

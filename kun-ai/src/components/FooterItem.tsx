@@ -15,10 +15,10 @@ export default component$(() => {
           'pb-10 text-2xl font-bold text-[#D5D5D5] md:pb-14 md:text-3xl md:leading-[50px]'
         }
       >
-        <h2>
+        <h2 class="text-balance">
           Start your journey with <span class={'text-[#8F66FF]'}>Kun.AI</span>:
         </h2>
-        <h2>Automate Your Business</h2>
+        <h2 class="text-balance">Automate Your Business</h2>
       </div>
       <Slot />
     </div>

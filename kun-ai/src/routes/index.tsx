@@ -48,7 +48,13 @@ export default component$(() => {
     <div class={'w-full bg-[#0D0A0E] pt-6'}>
       <a href="https://kunaico.com/">
         <div class="fixed left-0 top-0 z-50 flex items-center rounded-br-xl bg-[#171919] p-2 text-white transition-colors duration-200 hover:text-gray-300">
-          <img src={KunaiLogo} width="32" height="32" class="mr-2 h-8 w-8" />
+          <img
+            src={KunaiLogo}
+            alt="Kunai Logo"
+            width="32"
+            height="32"
+            class="mr-2 h-8 w-8"
+          />
           <span class="pr-2">Kunai</span>
         </div>
       </a>
@@ -76,7 +82,7 @@ export default component$(() => {
           />
         </a>
         <SubHeaderItem text={'What is Kun.Ai?'} isShort={true} />
-        <div class={'py-[45px] text-xl text-[#D5D5D5]'}>
+        <div class={'text-pretty py-[45px] text-xl text-[#D5D5D5]'}>
           <p>Our AI isn’t here to chat — it’s here to get work done.</p>
           <br />
           <p>

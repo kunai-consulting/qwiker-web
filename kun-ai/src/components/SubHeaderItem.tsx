@@ -15,7 +15,7 @@ export default component$<SubheaderPropertied>((props) => {
         props.class ? props.class : ''
       }`}
     >
-      <h2>{props.text}</h2>
+      <h2 class="text-balance">{props.text}</h2>
       {props.isShort ? (
         // <Short height={24} width={300}/>
         <img height={24} width={300} alt={'subheader'} src={Short} />

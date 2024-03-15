@@ -18,8 +18,10 @@ export default component$<CardProperties>((props) => {
       class={`flex ${additionalClass} relative mb-8 h-fit w-auto items-center justify-between gap-8 overflow-hidden rounded-[15px] border border-[#858891] bg-gradient-to-b from-[rgba(255,255,255,0.08)] to-[rgba(255,255,255,0)] p-8 shadow-[0_0_34px_-3px_rgba(0,0,0,0.1)] backdrop-blur-[22.5px] sm:mb-8 lg:mb-0`}
     >
       <div class={'max-w-none text-[#D5D5D5] sm:max-w-none lg:max-w-xs'}>
-        <div class={'text-xl font-bold uppercase'}>{props.title}</div>
-        <div class={'pt-3.5 text-base'}>{props.description}</div>
+        <h3 class={'text-balance text-xl font-bold uppercase'}>
+          {props.title}
+        </h3>
+        <p class={'text-pretty pt-3.5'}>{props.description}</p>
       </div>
       {props.styles &&
         props.styles.map((style, index) => {
