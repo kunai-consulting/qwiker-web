@@ -112,7 +112,7 @@ export default component$(() => {
                 src={NaturalLanguageImg}
                 width="80"
                 height="72"
-                class={'h-56 w-full bg-white'}
+                class={'h-56 w-full rounded-md'}
               />
             </CardItem>
             <div class={'flex flex-col place-content-between'}>
@@ -189,7 +189,7 @@ export default component$(() => {
               src={ContinuallyImg}
               width="80"
               height="72"
-              class={'h-52 w-72 bg-white md:w-full lg:w-80'}
+              class={'h-52 w-72 rounded-md md:w-full lg:w-80'}
             />
           </CardItem>
         </div>
