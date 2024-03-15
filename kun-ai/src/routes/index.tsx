@@ -46,7 +46,7 @@ export default component$(() => {
   return (
     <div class={'w-full bg-[#0D0A0E] pt-6'}>
       <a href="https://kunaico.com/">
-        <div class="fixed left-0 top-0 z-50 flex items-center rounded-br-xl bg-[#171919] p-2 text-white">
+        <div class="fixed left-0 top-0 z-50 flex items-center rounded-br-xl bg-[#171919] p-2 text-white transition-colors duration-200 hover:text-gray-300">
           <img src={KunaiLogo} width="32" height="32" class="mr-2 h-8 w-8" />
           <span class="pr-2">Kunai</span>
         </div>
