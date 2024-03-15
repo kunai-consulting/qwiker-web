@@ -143,6 +143,8 @@ export default component$(() => {
               'Kun.AI adapts to your business with our per-tenant continual learning engine. Provide supervision and instruction to the system just as you would a new hire, and it learns and improves.'
             }
             orientation={'horizontal'}
+            // workaround hiding green on small size to read text
+            hide={true}
             styles={[
               {
                 width: '326px',

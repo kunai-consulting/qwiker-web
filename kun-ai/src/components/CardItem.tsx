@@ -5,6 +5,7 @@ interface CardProperties {
   title: string;
   description: string;
   styles?: CSSProperties[];
+  hide?: boolean;
 }
 
 export default component$<CardProperties>((props) => {
@@ -21,13 +22,17 @@ export default component$<CardProperties>((props) => {
         <div class={'pt-3.5 text-base'}>{props.description}</div>
       </div>
       {props.styles &&
-        props.styles.map((style, index) => (
-          <div
-            class={'absolute -z-[1] rotate-[79.85deg] opacity-75 blur-[45px]'}
-            key={`style-${index}`}
-            style={{ ...style }}
-          />
-        ))}
+        props.styles.map((style, index) => {
+          return (
+            <div
+              class={`absolute -z-[1] ${
+                props.hide && index > 0 ? 'hidden lg:block' : ''
+              } rotate-[79.85deg] opacity-75 blur-[45px] `}
+              key={`style-${index}`}
+              style={{ ...style }}
+            />
+          );
+        })}
       <Slot />
     </div>
   );
