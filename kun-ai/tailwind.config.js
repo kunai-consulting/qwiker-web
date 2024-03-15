@@ -4,6 +4,9 @@ module.exports = {
   content: ['./src/**/*.{js,ts,jsx,tsx,mdx}'],
   theme: {
     extend: {
+      textShadow: {
+        md: '1px 1px #000',
+      },
       minHeight: {
         '1/2screen': '50vh',
       },
@@ -16,6 +19,11 @@ module.exports = {
         'app-hero-desktop':
           "url('https://ecm.capitalone.com/WCM/card/background-images/dining-and-entertainment/hero_dining_2880x1440.jpg')",
       }),
+    },
+  },
+  variants: {
+    extend: {
+      textShadow: ['hover'],
     },
   },
   plugins: [

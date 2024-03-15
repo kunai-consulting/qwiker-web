@@ -26,7 +26,7 @@ export default component$<CardProperties>((props) => {
           return (
             <div
               class={`absolute -z-[1] ${
-                props.hide && index > 0 ? 'hidden lg:block' : ''
+                props.hide && index > 0 ? 'hidden lg:block' : 'prefers-contrast'
               } rotate-[79.85deg] opacity-75 blur-[45px] `}
               key={`style-${index}`}
               style={{ ...style }}

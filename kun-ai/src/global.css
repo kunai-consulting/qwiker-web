@@ -9,3 +9,13 @@
 body {
   font-family: 'Work Sans', sans-serif;
 }
+.prefers-contrast {
+  display: block;
+}
+
+@media (prefers-contrast: high),
+(prefers-contrast: more) {
+  .prefers-contrast {
+    display: none !important;
+  }
+}

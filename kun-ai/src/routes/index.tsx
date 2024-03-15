@@ -1,4 +1,10 @@
-import { component$, useOnDocument, useSignal, $ } from '@builder.io/qwik';
+import {
+  component$,
+  useOnDocument,
+  useSignal,
+  $,
+  sync$,
+} from '@builder.io/qwik';
 import type { DocumentHead } from '@builder.io/qwik-city';
 import CardItem from '~/components/CardItem';
 import HeaderItem from '~/components/HeaderItem';
@@ -31,6 +37,12 @@ export default component$(() => {
       year.value = new Date().getFullYear();
     }),
   );
+  const emailLoading$ = sync$((event: Event, target: HTMLAnchorElement) => {
+    target.textContent = 'emailing...';
+    setTimeout(() => {
+      target.textContent = "Let's try it";
+    }, 2000);
+  });
   return (
     <div class={'w-full bg-[#0D0A0E] pt-6'}>
       <a href="https://kunaico.com/">
@@ -49,8 +61,9 @@ export default component$(() => {
         <BackgroundImages />
         <a
           href="mailto:ss@kun.ai"
-          class="mb-[4.5rem] mt-8 flex h-12 w-44 flex-row place-content-center items-center rounded border
-          border-[#8F66FF] font-semibold uppercase text-[#D5D5D5] focus:ring-2 focus:ring-blue-800"
+          onClick$={emailLoading$}
+          class="hover:text-shadow-md mb-[4.5rem] mt-8 flex h-12 w-44 flex-row place-content-center items-center rounded border
+          border-[#8F66FF] font-semibold uppercase text-[#D5D5D5] transition-colors duration-200 hover:bg-[#8F66FF] focus:ring-2 focus:ring-blue-800"
         >
           Let's try it
           <ArrForward class={'ml-3.5'} width={16} height={16} />
@@ -272,7 +285,16 @@ export default component$(() => {
             /> */}
           </ReviewItem>
         </div>
-        <FooterItem />
+        <FooterItem>
+          <a
+            href="mailto:ss@kun.ai"
+            onClick$={emailLoading$}
+            class="hover:text-shadow-md mb-2 flex h-12 w-44 flex-row place-content-center items-center rounded border border-[#8F66FF] font-semibold uppercase text-[#D5D5D5] transition-colors duration-200 hover:bg-[#8F66FF] focus:ring-2 focus:ring-blue-800 lg:mb-12"
+          >
+            Let's try it
+            <ArrForward class={'ml-3.5'} width={16} height={16} />
+          </a>
+        </FooterItem>
         <div class={'mt-9 text-xs text-[#D5D5D5]'}>© {year.value} Kun.AI</div>
       </div>
     </div>
