@@ -3,6 +3,7 @@ import { useDocumentHead, useLocation } from '@builder.io/qwik-city';
 import { component$ } from '@builder.io/qwik';
 
 import OgImage from "~/media/og_image.png"
+import Favicon from '~/media/favicon-32x32.png';
 
 /**
  * The RouterHead component is placed inside of the document `<head>` element.
@@ -23,11 +24,11 @@ export const RouterHead = component$(() => {
 
       <link rel="canonical" href={loc.url.href} />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <link rel="apple-touch-icon" sizes="180x180" href="favicon.svg" />
-      <link rel="icon" type="image/png" sizes="32x32" href="favicon.svg" />
-      <link rel="icon" type="image/png" sizes="16x16" href="favicon.svg" />
+      <link rel="apple-touch-icon" sizes="180x180" href={Favicon} />
+      <link rel="icon" type="image/png" sizes="32x32" href={Favicon} />
+      <link rel="icon" type="image/png" sizes="16x16" href={Favicon} />
       {/* <link rel="manifest" href="site.webmanifest"> */}
-      <link rel="mask-icon" href="safari-pinned-tab.svg" />
+      <link rel="mask-icon" href={Favicon} />
       <meta name="apple-mobile-web-app-title" content="Kun.Ai" />
       <meta name="application-name" content="Kun.Ai" />
       <meta name="msapplication-TileColor" content="#ffffff" />
