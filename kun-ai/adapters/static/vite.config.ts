@@ -4,7 +4,7 @@ import baseConfig from '../../vite.config.mjs';
 
 export default extendConfig(baseConfig, () => {
   const branch = process.env.VITE_BRANCH_VERSION || '';
-  const origin = process.env.VITE_ORIGIN_URL || 'kunaico.com';
+  const origin = process.env.VITE_ORIGIN_URL || 'kun.ai';
   return {
     build: {
       ssr: true,
