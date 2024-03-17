@@ -68,6 +68,7 @@ export default component$(() => {
         <BackgroundImages />
         <a
           href="mailto:ss@kun.ai"
+          target="_blank"
           class="hover:text-shadow-md mb-[4.5rem] mt-8 flex h-12 w-44 flex-row place-content-center items-center rounded border
           border-[#8F66FF] font-semibold uppercase text-[#D5D5D5] transition-colors duration-200 hover:bg-[#8F66FF] focus:ring-2 focus:ring-blue-800"
         >
@@ -300,6 +301,7 @@ export default component$(() => {
         <FooterItem>
           <a
             href="mailto:ss@kun.ai"
+            target="_blank"
             class="hover:text-shadow-md mb-2 flex h-12 w-44 flex-row place-content-center items-center rounded border border-[#8F66FF] font-semibold uppercase text-[#D5D5D5] transition-colors duration-200 hover:bg-[#8F66FF] focus:ring-2 focus:ring-blue-800 lg:mb-12"
           >
             Let's try it
