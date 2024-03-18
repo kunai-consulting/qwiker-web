@@ -38,11 +38,7 @@ export default component$(() => {
     }),
   );
   const emailLoading$ = sync$((event: Event, target: HTMLAnchorElement) => {
-    const prev = target.innerHTML;
-    target.textContent = 'emailing...';
-    setTimeout(() => {
-      target.innerHTML = prev;
-    }, 2000);
+    target.textContent = target.href.replace('mailto:', '');
   });
   return (
     <div class={'w-full bg-[#0D0A0E] pt-6'}>
@@ -68,7 +64,7 @@ export default component$(() => {
         <BackgroundImages />
         <a
           href="mailto:ss@kun.ai"
-          
+          onClick$={emailLoading$}
           class="hover:text-shadow-md mb-[4.5rem] mt-8 flex h-12 w-44 flex-row place-content-center items-center rounded border
           border-[#8F66FF] font-semibold uppercase text-[#D5D5D5] transition-colors duration-200 hover:bg-[#8F66FF] focus:ring-2 focus:ring-blue-800"
         >
@@ -301,7 +297,7 @@ export default component$(() => {
         <FooterItem>
           <a
             href="mailto:ss@kun.ai"
-            
+            onClick$={emailLoading$}
             class="hover:text-shadow-md mb-2 flex h-12 w-44 flex-row place-content-center items-center rounded border border-[#8F66FF] font-semibold uppercase text-[#D5D5D5] transition-colors duration-200 hover:bg-[#8F66FF] focus:ring-2 focus:ring-blue-800 lg:mb-12"
           >
             Let's try it
