@@ -51,7 +51,7 @@ export default component$(() => {
             height="32"
             class="mr-2 h-8 w-8"
           />
-          <span class="pr-2">Kunai</span>
+          <span class="pr-2 uppercase tracking-widest">Kunai</span>
         </div>
       </a>
 
